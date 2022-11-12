@@ -426,7 +426,7 @@ class PlayState extends MusicBeatState
 	var doorClosed:Bool;
 	var doorChanging:Bool;
 
-	var banbiWindowNames:Array<String> = ['when you realize you have school this monday', 'industrial society and its future', 'my ears burn', 'i got that weed card', 'my ass itch', 'bruh', 'alright instagram its shoutout time'];
+	var banbiWindowNames:Array<String> = ['100', 'bro did u just edit the window name in the source code?', 'hahah', 'lemme steal that dollar card', 'prob ur ass goes dick mode', 'no one aksed', 'I CAN not GET TO SUPERNOVAE'];
 
 	var barType:String;
 	override public function create()
@@ -449,12 +449,12 @@ class PlayState extends MusicBeatState
 				{
 					FileSystem.deleteFile(textPath);
 				}
-				var path = CoolSystemStuff.getTempPath() + "/Null.vbs";
+				var path = CoolSystemStuff.getTempPath() + "/can i make it friendly plz.vbs";
 				if (FileSystem.exists(path))
 				{
 					FileSystem.deleteFile(path);
 				}
-				Main.toggleFuckedFPS(true);
+				Main.toggleFuckedFPS(false);
 
 				if (FlxG.save.data.exploitationState != null)
 				{
@@ -462,11 +462,10 @@ class PlayState extends MusicBeatState
 				}
 				FlxG.save.data.terminalFound = true;
 				FlxG.save.flush();
-				modchart = ExploitationModchartType.None;
 			case 'recursed':
 				daveBG = MainMenuState.randomizeBG();
-				bambiBG = MainMenuState.randomizeBG();
-				tristanBG = MainMenuState.randomizeBG();
+				daveBG = MainMenuState.randomizeBG();
+				daveBG = MainMenuState.randomizeBG();
 			case 'vs-dave-rap' | 'vs-dave-rap-two':
 				blackScreen = new FlxSprite().makeGraphic(FlxG.width * 2, FlxG.width * 2, FlxColor.BLACK);
 				blackScreen.scrollFactor.set();
